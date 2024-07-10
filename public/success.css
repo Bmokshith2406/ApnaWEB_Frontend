@@ -1,0 +1,89 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('http://localhost:3000/Hello.jpg');
+  }
+  
+  section.Ticking {
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px 10px rgba(0.1, 0.1, 0.1, 0.1);
+  }
+  
+  .Image1 {
+    width: 30%;
+    height: auto;
+    margin-top: 22px;
+    margin-bottom: -8px;
+  }
+  
+  .Main {
+    font-size: 3vw;
+    color: #333333;
+  }
+  
+  .Main span {
+    color: #00a65a;
+  }
+  
+  h2 {
+    font-size: 2vw;
+    color: #555555;
+    margin-bottom: 20px;
+  }
+  
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00a65a;
+    color: #ffffff;
+    text-decoration: none;
+    font-size:31px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+  
+  a:hover {
+    background-color: #8DD06C;
+    transition: all 0.5s ease-in-out;
+    color: black;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .Image1 {
+      width: 50%;
+    }  
+    .Main {
+      font-size: 8vw;
+    }
+  
+    h2 {
+      font-size: 4vw;
+    }
+  
+    section.Ticking {
+      width: 70%; /* Adjusted width for mobile */
+      padding: 10px; /* Added padding for smaller screens */
+      margin: 10px; /* Added margin for smaller screens */
+      border-radius: 30px;
+
+    }
+  }
+  

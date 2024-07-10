@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ApnaWEB's Form | Codes & Bytes</title>
+    <link rel="shortcut icon" type="x-icon" href="/Logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/Form.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10"/>
+    <style>
+      .file-upload-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center items horizontally */
+        gap: 20px; /* Adjust spacing between items */
+      }
+    
+      .file-upload {
+        flex: 1 1 300px; /* Take up available space with max-width */
+        text-align: center; /* Center contents */
+      }
+    
+      .double-upload {
+        flex-basis: 50%; /* Two items in one row */
+      }
+    
+      .single-upload {
+        flex-basis: 100%; /* One item in a new row */
+      }
+    
+      .custom-file-upload {
+        display: inline-block;
+        cursor: pointer;
+        padding: 10px 15px;
+        border: 2px solid #ccc;
+        border-radius: 30px;
+        background-color: #f0f0f0;
+        margin-top: 20px;
+        text-align: center;
+      }
+    
+      .custom-file-upload:hover {
+        background-color: #e0e0e0;
+      }
+      
+      
+      .custom-file-upload input[type=file] {
+        display: none; /* Hide the default file input */
+      }
+    
+      .custom-file-upload span {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    
+      .custom-file-upload img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+    
+      #file-name1, #file-name2, #file-name3 {
+        margin-top: 10px;
+      }
+      img {
+            border-radius: 40px; /* Add border radius to images */
+        }
+    
+      @media screen and (max-width: 768px) {
+        .file-upload {
+          flex-basis: 100%; /* Full width on smaller screens */
+        }
+    
+        .double-upload {
+          flex-basis: 100%; /* Stack items on top of each other */
+        }
+      }
+    </style>
+  </head>
+  <body class="Bodies"> 
+    <div class="formssh">
+      <div class="title-div">
+        <img src="/Logo.jpg" class="Logo" alt="Logo" />
+        <h1>Codes & Bytes</h1>  
+        <p class="hekko">
+          Please Complete All the Details Carefully to Create Your Own
+          Personalized Portfolio Website and Resume.
+        </p>
+      </div>
+      <hr class="Line" />
+      <form id="myForm" action="/submit-form" method="post" enctype="multipart/form-data" >
+        <div class="namesz" >Choose the Website Template<span class="required" style="color: red;">*</span></div>
+
+        <div class="Templates_Div">
+          <div class="input-divss">
+            <a class="templates" href="https://bmokshith2406.github.io/Profile/" target="_blank">
+              Template 1
+            </a>
+            <input class="Templatess" type="radio" name="selectedImage" value="1210" id="template1" required style="display: none;" />
+            <img class="Templatessimg" src="Template_1.png" alt="Template 1" onclick="selectImage(this)" />
+          </div>
+          <div class="input-divss">
+            <a class="templates" href="https://codewithsadee.github.io/vcard-personal-portfolio/" target="_blank">
+              Template 2
+            </a>
+            <input class="Templatess" type="radio" name="selectedImage" value="1309" id="template2" required style="display: none;" />
+            <img class="Templatessimg" src="Template_2.png" alt="Template 2" onclick="selectImage(this)" />
+          </div>
+        </div>
+        
+        <hr class="Line" />
+       
+        <div class="namesz">Personal Details <span class="required">*</span>
+        </div>
+        <div class="education-div3">
+        <div class="input-div">
+          <label for="year-from">First Name</label>
+          <input
+            type="input"
+            name="Name"
+            id="Name"
+            placeholder="First_Name"
+            onfocus="clearPlaceholder(this)"
+            required
+          />
+        </div>
+        <div class="input-div">
+          <label for="year-from">Last Name</label>
+          <input
+            type="input"
+            name="Last_Name"
+            id="Last_Name"
+            placeholder="Last_Name"
+            onfocus="clearPlaceholder(this)"
+            required
+          />
+        </div>
+        <div class="input-div">
+          <label for="year-from">Father's Name</label>
+          <input
+            type="input"
+            name="Father_Name"
+            id="Father_Name"
+            placeholder="Father's Name"
+            onfocus="clearPlaceholder(this)"
+            required
+          />
+        </div>
+
+          <div class="input-div">
+          <label for="year-from">Mother's Name</label>
+          <input
+            type="input"
+            name="Mother_Name"
+            id="Mother_Name"
+            placeholder="Mother's Name"
+            onfocus="clearPlaceholder(this)"
+            required
+          />
+        </div>
+          <div class="input-div">
+            <label for="year-from">DOB</label>
+            <input type="date" id="DOB" name="DOB" required />
+          </div>
+          <div class="input-div">
+            <label for="year-from">Email</label>
+            <input
+              type="email"
+              name="Email"
+              id="Email"
+              placeholder="Email"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div> 
+          
+          <div class="input-div12" style="margin: auto; margin-top: -3px;">
+            <label  style="margin-bottom: 10px; margin-top: 25px;" for="year-from">Gender</label></br>
+            <div class="Genn"  >
+
+            <label>
+              <input type="radio" id="Gender" name="Gender" value="MALE"  /> Male
+            </label>
+            <label>
+              <input type="radio" id="Gender" name="Gender" value="FEMALE"  /> Female
+            </label>
+            <label>
+              <input type="radio" id="Gender" name="Gender" value="OTHER"  /> Other
+            </label>
+          </div>
+        </div>
+          <div class="input-div">
+            <label for="year-from"> Address</label>
+            <input
+              type="input"
+              name="Address"
+              id="Address"
+              onfocus="clearPlaceholder(this)"
+              placeholder="City & State"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-from">Country Code</label>
+            <select class="Countriess" name="CountryCode" id="CountryCode" required>
+              <option value="+93">Afghanistan (+93)</option>
+              <option value="+355">Albania (+355)</option>
+              <option value="+213">Algeria (+213)</option>
+              <option value="+376">Andorra (+376)</option>
+              <option value="+244">Angola (+244)</option>
+              <option value="+1">Anguilla (+1)</option>
+              <option value="+1">Antigua & Barbuda (+1)</option>
+              <option value="+54">Argentina (+54)</option>
+              <option value="+374">Armenia (+374)</option>
+              <option value="+297">Aruba (+297)</option>
+              <option value="+61">Australia (+61)</option>
+              <option value="+43">Austria (+43)</option>
+              <option value="+994">Azerbaijan (+994)</option>
+              <option value="+1">Bahamas (+1)</option>
+              <option value="+973">Bahrain (+973)</option>
+              <option value="+880">Bangladesh (+880)</option>
+              <option value="+1">Barbados (+1)</option>
+              <option value="+375">Belarus (+375)</option>
+              <option value="+32">Belgium (+32)</option>
+              <option value="+501">Belize (+501)</option>
+              <option value="+229">Benin (+229)</option>
+              <option value="+1">Bermuda (+1)</option>
+              <option value="+975">Bhutan (+975)</option>
+              <option value="+591">Bolivia (+591)</option>
+              <option value="+387">Bosnia & Herzegovina (+387)</option>
+              <option value="+267">Botswana (+267)</option>
+              <option value="+55">Brazil (+55)</option>
+              <option value="+673">Brunei (+673)</option>
+              <option value="+359">Bulgaria (+359)</option>
+              <option value="+226">Burkina Faso (+226)</option>
+              <option value="+257">Burundi (+257)</option>
+              <option value="+855">Cambodia (+855)</option>
+              <option value="+237">Cameroon (+237)</option>
+              <option value="+1">Canada (+1)</option>
+              <option value="+238">Cape Verde (+238)</option>
+              <option value="+1">Cayman Islands (+1)</option>
+              <option value="+236">Central African Republic (+236)</option>
+              <option value="+235">Chad (+235)</option>
+              <option value="+56">Chile (+56)</option>
+              <option value="+86">China (+86)</option>
+              <option value="+57">Colombia (+57)</option>
+              <option value="+269">Comoros (+269)</option>
+              <option value="+242">Congo - Brazzaville (+242)</option>
+              <option value="+243">Congo - Kinshasa (+243)</option>
+              <option value="+682">Cook Islands (+682)</option>
+              <option value="+506">Costa Rica (+506)</option>
+              <option value="+225">Côte d’Ivoire (+225)</option>
+              <option value="+385">Croatia (+385)</option>
+              <option value="+53">Cuba (+53)</option>
+              <option value="+357">Cyprus (+357)</option>
+              <option value="+420">Czech Republic (+420)</option>
+              <option value="+45">Denmark (+45)</option>
+              <option value="+253">Djibouti (+253)</option>
+              <option value="+1">Dominica (+1)</option>
+              <option value="+1">Dominican Republic (+1)</option>
+              <option value="+593">Ecuador (+593)</option>
+              <option value="+20">Egypt (+20)</option>
+              <option value="+503">El Salvador (+503)</option>
+              <option value="+240">Equatorial Guinea (+240)</option>
+              <option value="+291">Eritrea (+291)</option>
+              <option value="+372">Estonia (+372)</option>
+              <option value="+251">Ethiopia (+251)</option>
+              <option value="+500">Falkland Islands (+500)</option>
+              <option value="+298">Faroe Islands (+298)</option>
+              <option value="+679">Fiji (+679)</option>
+              <option value="+358">Finland (+358)</option>
+              <option value="+33">France (+33)</option>
+              <option value="+594">French Guiana (+594)</option>
+              <option value="+689">French Polynesia (+689)</option>
+              <option value="+241">Gabon (+241)</option>
+              <option value="+220">Gambia (+220)</option>
+              <option value="+995">Georgia (+995)</option>
+              <option value="+49">Germany (+49)</option>
+              <option value="+233">Ghana (+233)</option>
+              <option value="+350">Gibraltar (+350)</option>
+              <option value="+30">Greece (+30)</option>
+              <option value="+299">Greenland (+299)</option>
+              <option value="+1">Grenada (+1)</option>
+              <option value="+590">Guadeloupe (+590)</option>
+              <option value="+1">Guam (+1)</option>
+              <option value="+502">Guatemala (+502)</option>
+              <option value="+224">Guinea (+224)</option>
+              <option value="+245">Guinea-Bissau (+245)</option>
+              <option value="+592">Guyana (+592)</option>
+              <option value="+509">Haiti (+509)</option>
+              <option value="+504">Honduras (+504)</option>
+              <option value="+852">Hong Kong SAR China (+852)</option>
+              <option value="+36">Hungary (+36)</option>
+              <option value="+354">Iceland (+354)</option>
+              <option value="+91">India (+91)</option>
+              <option value="+62">Indonesia (+62)</option>
+              <option value="+98">Iran (+98)</option>
+              <option value="+964">Iraq (+964)</option>
+              <option value="+353">Ireland (+353)</option>
+              <option value="+972">Israel (+972)</option>
+              <option value="+39">Italy (+39)</option>
+              <option value="+1">Jamaica (+1)</option>
+              <option value="+81">Japan (+81)</option>
+              <option value="+962">Jordan (+962)</option>
+              <option value="+7">Kazakhstan (+7)</option>
+              <option value="+254">Kenya (+254)</option>
+              <option value="+686">Kiribati (+686)</option>
+              <option value="+965">Kuwait (+965)</option>
+              <option value="+996">Kyrgyzstan (+996)</option>
+              <option value="+856">Laos (+856)</option>
+              <option value="+371">Latvia (+371)</option>
+              <option value="+961">Lebanon (+961)</option>
+              <option value="+266">Lesotho (+266)</option>
+              <option value="+231">Liberia (+231)</option>
+              <option value="+218">Libya (+218)</option>
+              <option value="+423">Liechtenstein (+423)</option>
+              <option value="+370">Lithuania (+370)</option>
+              <option value="+352">Luxembourg (+352)</option>
+              <option value="+853">Macau SAR China (+853)</option>
+              <option value="+389">Macedonia (+389)</option>
+              <option value="+261">Madagascar (+261)</option>
+              <option value="+265">Malawi (+265)</option>
+              <option value="+60">Malaysia (+60)</option>
+              <option value="+960">Maldives (+960)</option>
+              <option value="+223">Mali (+223)</option>
+              <option value="+356">Malta (+356)</option>
+              <option value="+692">Marshall Islands (+692)</option>
+              <option value="+596">Martinique (+596)</option>
+              <option value="+222">Mauritania (+222)</option>
+              <option value="+230">Mauritius (+230)</option>
+              <option value="+262">Mayotte (+262)</option>
+              <option value="+52">Mexico (+52)</option>
+              <option value="+691">Micronesia (+691)</option>
+              <option value="+373">Moldova (+373)</option>
+              <option value="+377">Monaco (+377)</option>
+              <option value="+976">Mongolia (+976)</option>
+              <option value="+382">Montenegro (+382)</option>
+              <option value="+1">Montserrat (+1)</option>
+              <option value="+212">Morocco (+212)</option>
+              <option value="+258">Mozambique (+258)</option>
+              <option value="+95">Myanmar (Burma) (+95)</option>
+              <option value="+264">Namibia (+264)</option>
+              <option value="+674">Nauru (+674)</option>
+              <option value="+977">Nepal (+977)</option>
+              <option value="+31">Netherlands (+31)</option>
+              <option value="+687">New Caledonia (+687)</option>
+              <option value="+64">New Zealand (+64)</option>
+              <option value="+505">Nicaragua (+505)</option>
+              <option value="+227">Niger (+227)</option>
+              <option value="+234">Nigeria (+234)</option>
+              <option value="+683">Niue (+683)</option>
+              <option value="+672">Norfolk Island (+672)</option>
+              <option value="+850">North Korea (+850)</option>
+              <option value="+47">Norway (+47)</option>
+              <option value="+968">Oman (+968)</option>
+              <option value="+92">Pakistan (+92)</option>
+              <option value="+680">Palau (+680)</option>
+              <option value="+970">Palestinian Territories (+970)</option>
+              <option value="+507">Panama (+507)</option>
+              <option value="+675">Papua New Guinea (+675)</option>
+              <option value="+595">Paraguay (+595)</option>
+              <option value="+51">Peru (+51)</option>
+              <option value="+63">Philippines (+63)</option>
+              <option value="+48">Poland (+48)</option>
+              <option value="+351">Portugal (+351)</option>
+              <option value="+1">Puerto Rico (+1)</option>
+              <option value="+974">Qatar (+974)</option>
+              <option value="+262">Réunion (+262)</option>
+              <option value="+40">Romania (+40)</option>
+              <option value="+7">Russia (+7)</option>
+              <option value="+250">Rwanda (+250)</option>
+              <option value="+685">Samoa (+685)</option>
+              <option value="+378">San Marino (+378)</option>
+              <option value="+239">São Tomé & Príncipe (+239)</option>
+              <option value="+966">Saudi Arabia (+966)</option>
+              <option value="+221">Senegal (+221)</option>
+              <option value="+381">Serbia (+381)</option>
+              <option value="+248">Seychelles (+248)</option>
+              <option value="+232">Sierra Leone (+232)</option>
+              <option value="+65">Singapore (+65)</option>
+              <option value="+421">Slovakia (+421)</option>
+              <option value="+386">Slovenia (+386)</option>
+              <option value="+677">Solomon Islands (+677)</option>
+              <option value="+252">Somalia (+252)</option>
+              <option value="+27">South Africa (+27)</option>
+              <option value="+82">South Korea (+82)</option>
+              <option value="+34">Spain (+34)</option>
+              <option value="+94">Sri Lanka (+94)</option>
+              <option value="+1">St. Kitts & Nevis (+1)</option>
+              <option value="+1">St. Lucia (+1)</option>
+              <option value="+590">St. Martin (+590)</option>
+              <option value="+508">St. Pierre & Miquelon (+508)</option>
+              <option value="+1">St. Vincent & Grenadines (+1)</option>
+              <option value="+249">Sudan (+249)</option>
+              <option value="+597">Suriname (+597)</option>
+              <option value="+268">Swaziland (+268)</option>
+              <option value="+46">Sweden (+46)</option>
+              <option value="+41">Switzerland (+41)</option>
+              <option value="+963">Syria (+963)</option>
+              <option value="+886">Taiwan (+886)</option>
+              <option value="+992">Tajikistan (+992)</option>
+              <option value="+255">Tanzania (+255)</option>
+              <option value="+66">Thailand (+66)</option>
+              <option value="+670">Timor-Leste (+670)</option>
+              <option value="+228">Togo (+228)</option>
+              <option value="+676">Tonga (+676)</option>
+              <option value="+1">Trinidad & Tobago (+1)</option>
+              <option value="+216">Tunisia (+216)</option>
+              <option value="+90">Turkey (+90)</option>
+              <option value="+993">Turkmenistan (+993)</option>
+              <option value="+1">Turks & Caicos Islands (+1)</option>
+              <option value="+688">Tuvalu (+688)</option>
+              <option value="+256">Uganda (+256)</option>
+              <option value="+380">Ukraine (+380)</option>
+              <option value="+971">United Arab Emirates (+971)</option>
+              <option value="+44">United Kingdom (+44)</option>
+              <option value="+1">United States (+1)</option>
+              <option value="+598">Uruguay (+598)</option>
+              <option value="+998">Uzbekistan (+998)</option>
+              <option value="+678">Vanuatu (+678)</option>
+              <option value="+379">Vatican City (+379)</option>
+              <option value="+58">Venezuela (+58)</option>
+              <option value="+84">Vietnam (+84)</option>
+              <option value="+681">Wallis & Futuna (+681)</option>
+              <option value="+212">Western Sahara (+212)</option>
+              <option value="+967">Yemen (+967)</option>
+              <option value="+260">Zambia (+260)</option>
+              <option value="+263">Zimbabwe (+263)</option>
+            </select>
+          </div>
+            <div class="input-div">
+              <label for="year-from">Mobile Number</label>
+              <input
+                type="text"
+                name="Phone"
+                id="Phone"
+                onfocus="clearPlaceholder(this)"
+                placeholder="Phone"
+                required
+              />
+            </div>
+          <div class="input-div">
+            <label for="year-from">Domain</label>
+            <input
+              type="input"
+              name="Occupation"
+              id="Occupation"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Domain"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-from">Profession</label>
+            <input
+              type="input"
+              name="Profession"
+              id="Profession"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Profession"
+              required
+            />
+          </div>
+        
+          <div class="input-div">
+            <label for="year-from">Languages</label>
+            <input
+              type="input"
+              name="Languages"
+              id="Languages"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Languages Known"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-from">Hobbies</label>
+            <input
+              type="input"
+              name="Hobbies"
+              id="Hobbies"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Hobbies"
+              required
+            />
+          </div>
+        </div>
+        <hr class="Line" />
+        <div class="namesz">Please Upload Your Profile Photo <span class="required">*</span>
+        </div>
+        <br>
+        <label for="file-upload4" class="custom-file-upload">
+          <span>Choose Photo</span>
+          <input id="file-upload4" type="file" name="mandatoryFile" accept="image/*" required onchange="previewFile('file-upload4', 'image-preview4', 'file-name4')" />
+          <div id="file-name4" style="margin-top: 10px;"></div>
+          <img id="image-preview4" src="#" alt="Image preview" style="display: none; max-width: 250px; width: 250px; margin-top: 10px;" />
+        </label>
+        <hr class="Line" />
+        <div class="namesz">Education (10th or Equivalent) <span class="required">*</span>
+        </div>
+        <div class="education-div1">
+          
+          <div class="input-div">
+            <label for="year-from">Start Year</label>
+            <input
+              type="text"
+              name="Year_From1"
+              id="Year_From1"
+              oninput="validateNumber(this)"  
+              placeholder="Start Year"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-to">End Year</label>
+            <input
+              type="text"
+              name="Year_To1"
+              oninput="validateNumber(this)"
+              id="Year_To1"
+              placeholder="End Year"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="cgpa">CGPA Exercised</label>
+            <input
+              type="text"
+              name="CGPA1"
+              id="CGPA1"
+              placeholder="CGPA"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Institute Name</label>
+            <input
+              type="text"
+              name="Institute_Name1"
+              id="Institute_Name1"
+              placeholder="Name"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-address">Address</label>
+            <input
+              type="text"
+              name="Institute_Address1"
+              id="Institute_Address1"
+              placeholder="City & State"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div>
+        </div>
+        <hr class="Line"/>
+        <div class="namesz">Education (12th or Equivalent) <span class="required">*</span>
+        </div>
+        <div class="education-div">
+          
+          <div class="input-div">
+            <label for="year-from">Start Year</label>
+            <input
+              type="text"
+              name="Year_From2"
+              id="Year_From2"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Start Year"
+              oninput="validateNumber(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-to">End Year</label>
+            <input
+              type="text"
+              name="Year_To2"
+              onfocus="clearPlaceholder(this)"
+              id="Year_To2"
+              oninput="validateNumber(this)"
+              placeholder="End Year"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="cgpa">CGPA Exercised</label>
+            <input
+              type="text"
+              name="CGPA2"
+              onfocus="clearPlaceholder(this)"
+              id="CGPA2"
+              placeholder="CGPA"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Course Name</label>
+            <input
+              type="text"
+              name="Course1"
+              onfocus="clearPlaceholder(this)"
+              id="Course1"
+      
+              placeholder="Course"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Institute Name</label>
+            <input
+              type="text"
+              name="Institute_Name2"
+              onfocus="clearPlaceholder(this)"
+              id="Institute_Name2"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-address">Address</label>
+            <input
+              type="text"
+              name="Institute_Address2"
+              onfocus="clearPlaceholder(this)"
+              id="Institute_Address2"
+              placeholder="City & State"
+              required
+            />
+          </div>
+        </div>
+        <hr class="Line"/>
+        <div class="namesz">Education (UG or Equivalent)<span class="required">*</span>
+        </div>
+        <div class="education-div">
+          <div class="input-div">
+            <label for="year-from">Start Year</label>
+            <input
+              type="text"
+              name="Year_From3"
+              id="Year_From3"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Start Year"
+              oninput="validateNumber(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-to">End Year</label>
+            <input
+              type="text"
+              name="Year_To3"
+              onfocus="clearPlaceholder(this)"
+              id="Year_To3"
+              oninput="validateNumber(this)"
+              placeholder="End Year"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="cgpa">CGPA Exercised</label>
+            <input
+              type="text"
+              name="CGPA3"
+              onfocus="clearPlaceholder(this)"
+              id="CGPA3"
+              placeholder="CGPA"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Course Name</label>
+            <input
+              type="text"
+              name="Course2"
+              onfocus="clearPlaceholder(this)"
+              id="Course2"
+              placeholder="Course"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Institute Name</label>
+            <input
+              type="text"
+              name="Institute_Name3"
+              onfocus="clearPlaceholder(this)"
+              id="Institute_Name3"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-address">Address</label>
+            <input
+              type="text"
+              name="Institute_Address3"
+              onfocus="clearPlaceholder(this)"
+              id="Institute_Address3"
+              placeholder="City & State"
+              required
+            />
+          </div>
+        </div>
+        <hr class="Line" />
+        <div class="namesz">Skillset <span class="required">*</span>
+        </div>
+        <div class="education-div1">
+            <div class="input-div">
+              <label for="year-from">Skill-I </label>
+              <input
+                type="text"
+                name="skill1"
+                id="skill1"
+                onfocus="clearPlaceholder(this)"
+                placeholder="Skill"
+                required
+              />
+            </div>
+            <div class="input-div">
+              <label for="year-to">Skill-II </label>
+              <input
+                type="text"
+                name="skill2"
+                onfocus="clearPlaceholder(this)"
+                id="skill2"
+                placeholder="Skill"
+                required
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-name">Skill-III </label>
+              <input
+                type="text"
+                name="skill3"
+                onfocus="clearPlaceholder(this)"
+                id="skill3"
+                placeholder="Skill"
+                required
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-address">Skill-VI </label>
+              <input
+                type="text"
+                name="skill4"
+                onfocus="clearPlaceholder(this)"
+                id="skill4"
+                placeholder="Skill"
+              />
+            </div>
+            <div class="input-div">
+              <label for="cgpa">Skill-V </label>
+              <input
+                type="text"
+                name="skill5"
+                onfocus="clearPlaceholder(this)"
+                id="skill5"
+                placeholder="Skill"
+              />
+            </div>
+        </div>
+        <hr class="Line"/>
+        <section class="team" id="teamMembers" style="display: none">
+          <div class="namesz">
+            Work Experience (Most-Recent)
+          </div>
+          <div class="education-div1">
+            <div class="input-div">
+              <label for="year-from">Start Year </label>
+              <input
+                type="text"
+                name="Year_From4"
+                id="Year_From4"
+                oninput="validateNumber(this)"
+                onfocus="clearPlaceholder(this)"
+                placeholder="Start Year"
+              />
+            </div>
+            <div class="input-div">
+              <label for="year-to">End Year </label>
+              <input
+                type="text"
+                name="Year_To4"
+                oninput="validateNumber(this)"
+                onfocus="clearPlaceholder(this)"
+                id="Year_To4"
+                placeholder="End Year"
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-name">Organisation's Name </label>
+              <input
+                type="text"
+                name="Institute_Name4"
+                onfocus="clearPlaceholder(this)"
+                id="Institute_Name4"
+                placeholder="Name"
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-address">Significant Contribution </label>
+              <input
+                type="text"
+                name="Signi1"
+                onfocus="clearPlaceholder(this)"
+                id="Signi1"
+                placeholder="Contribution"
+              />
+            </div>
+            <div class="input-div">
+              <label for="cgpa">Designation </label>
+              <input
+                type="text"
+                name="CGPA4"
+                onfocus="clearPlaceholder(this)"
+                id="CGPA4"
+                placeholder="Designation"
+              />
+            </div>
+          </div>
+        <hr class="Line" />
+        <div class="namesz">Work Experience-II
+        </div>
+        <div class="education-div1">
+            <div class="input-div">
+              <label for="year-from">Start Year </label>
+              <input
+                type="text"
+                name="Year_From5"
+                id="Year_From5"
+                oninput="validateNumber(this)"
+                onfocus="clearPlaceholder(this)"
+                placeholder="Start Year"
+              />
+            </div>
+            <div class="input-div">
+              <label for="year-to">End Year </label>
+              <input
+                type="text"
+                name="Year_To5"
+                oninput="validateNumber(this)"
+                onfocus="clearPlaceholder(this)"
+                id="Year_To5"
+                placeholder="End Year"
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-name">Organisation's Name </label>
+              <input
+                type="text"
+                name="Institute_Name5"
+                onfocus="clearPlaceholder(this)"
+                id="Institute_Name5"
+                placeholder="Name"
+              />
+            </div>
+            <div class="input-div"> 
+              <label for="institute-address">Significant Contribution </label>
+              <input
+                type="text"
+                name="Signi2"
+                onfocus="clearPlaceholder(this)"
+                id="Signi2"
+                placeholder="Contribution"
+              />
+            </div>
+            <div class="input-div">
+              <label for="cgpa">Designation </label>
+              <input
+                type="text"
+                name="CGPA5"
+                onfocus="clearPlaceholder(this)"
+                id="CGPA5"
+                placeholder="Designation"
+              />
+            </div>
+        </div>
+        <hr class="Line" />
+        <div class="namesz">Work Experience-III
+        </div>
+        <div class="education-div1">
+            <div class="input-div">
+              <label for="year-from">Start Year </label>
+              <input
+                type="text"
+                name="Year_From6"
+                id="Year_From6"
+                oninput="validateNumber(this)"
+                onfocus="clearPlaceholder(this)"
+                placeholder="Start Year"
+              />
+            </div>
+            <div class="input-div">
+              <label for="year-to">End Year </label>
+              <input
+                type="text"
+                name="Year_To6"
+                oninput="validateNumber(this)"
+                onfocus="clearPlaceholder(this)"
+                id="Year_To6"
+                placeholder="End Year"
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-name">Organisation's Name </label>
+              <input
+                type="text"
+                name="Institute_Name6"
+                onfocus="clearPlaceholder(this)"
+                id="Institute_Name6"
+                placeholder="Name"
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-address">Significant Contribution </label>
+              <input
+                type="text"
+                name="Signi3"
+                onfocus="clearPlaceholder(this)"
+                id="Signi3"
+                placeholder="Contribution"
+              />
+            </div>
+            <div class="input-div">
+              <label for="cgpa">Designation </label>
+              <input
+                type="text"
+                name="CGPA6"
+                onfocus="clearPlaceholder(this)"
+                id="CGPA6"
+                placeholder="Designation"
+              />
+            </div>
+        </div>
+          
+          <hr class="Line" />
+          <div class="namesz">Social Media Links</div>
+          <div class="education-div1">
+            <div class="input-div">
+              <label for="institute-name">Twitter</label>
+              <input
+                type="input"
+                name="Twitter"
+                id="Twitter"
+                onfocus="clearPlaceholder(this)"
+                placeholder="Link"
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-name">Instagram</label>
+              <input
+                type="input"
+                name="Instagram"
+                id="Instagram"
+                onfocus="clearPlaceholder(this)"
+                placeholder="Link"
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-name">GitHub</label>
+              <input
+                type="input"
+                name="GitHub"
+                id="GitHub"
+                onfocus="clearPlaceholder(this)"
+                placeholder="Link"
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-name">Facebook</label>
+              <input
+                type="input"
+                name="Facebook"
+                id="Facebook"
+                onfocus="clearPlaceholder(this)"
+                placeholder="Link"
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-name">LinkedIn</label>
+              <input
+                type="input"
+                name="LinkedIn"
+                id="LinkedIn"
+                onfocus="clearPlaceholder(this)"
+                placeholder="Link"
+              />
+            </div>
+          </div>
+          <hr class="Line" />
+          <div class="namesz">Projects You Have Completed</div>
+          <div class="education-div2">
+            <div class="input-div">
+              <label for="year-from">Project-I </label>
+              <input
+                type="text"
+                name="project1"
+                id="project1"
+                oninput="toggleUploadButton('project1', 'file-upload1')"
+                onfocus="clearPlaceholder(this)"
+                placeholder="Project"
+              />
+            </div>
+            <div class="input-div">
+              <label for="year-to">Project-II </label>
+              <input
+                type="text"
+                name="project2"
+                oninput="toggleUploadButton('project2', 'file-upload2')"
+                onfocus="clearPlaceholder(this)"
+                id="project2"
+                placeholder="Project"
+              />
+            </div>
+            <div class="input-div">
+              <label for="institute-name">Project-III </label>
+              <input
+                type="text"
+                name="project3"
+                oninput="toggleUploadButton('project3', 'file-upload3')"
+                onfocus="clearPlaceholder(this)"
+                id="project3"
+                placeholder="Project"
+              />
+            </div>
+          </div>
+            <hr class="Line" />
+        <div class="namesz">Please Upload Photos of Your Projects</div><br>
+        <div class="file-upload-container">
+          <div class="file-upload double-upload">
+            <label for="file-upload1" class="custom-file-upload" onclick="checkProjectTitle('project1')">
+              <span>Choose Photo for Project-I</span>
+              <input id="file-upload1" type="file" name="optionalFile1" accept="image/*" onchange="previewFile('file-upload1', 'image-preview1', 'file-name1')" disabled/>
+              <div id="file-name1" style="margin-top: 10px;"></div>
+              <img id="image-preview1" src="#" alt="Image preview" style="display: none; max-width: 250px; width: 250px; margin-top: 10px;" />
+            </label>
+          </div>
+          
+          <div class="file-upload double-upload">
+            <label for="file-upload2" class="custom-file-upload" onclick="checkProjectTitle('project2')">
+              <span>Choose Photo for Project-II</span>
+              <input id="file-upload2" type="file" name="optionalFile2" accept="image/*" onchange="previewFile('file-upload2', 'image-preview2', 'file-name2')" disabled/>
+              <div id="file-name2" style="margin-top: 10px;"></div>
+              <img id="image-preview2" src="#" alt="Image preview" style="display: none; max-width: 250px;width: 250px; margin-top: 10px;" />
+            </label>
+          </div>
+          
+          <div class="file-upload single-upload">
+            <label for="file-upload3" class="custom-file-upload" onclick="checkProjectTitle('project3')" >
+              <span>Choose Photo for Project-III</span>
+              <input id="file-upload3" type="file" name="optionalFile3" accept="image/*" onchange="previewFile('file-upload3', 'image-preview3', 'file-name3')" disabled />
+              <div id="file-name3" style="margin-top: 10px;"></div>
+              <img id="image-preview3" src="#" alt="Image preview" style="display: none; max-width: 250px; width: 250px;; margin-top: 10px;" />
+            </label>
+          </div>
+        </div>
+
+        <hr class="Line" />
+        </section>    
+        <div class="filter">
+          <button class="toggleTeam" id="toggleTeam" aria-label="Toggle Team Members">Additional Info</button>
+        </div>   
+        <hr class="Line" /> 
+        
+        <!-- Submit button -->
+        <div class="terms-div" style="margin-bottom:20px ;">
+          <label>
+            <input type="checkbox" id="terms" required /> I Agree to the <a href="T&C.html" target="_blank">Terms and Conditions</a>
+          </label>
+        </div>
+        <div>
+          <input class="btn" type="submit" id="submitButton" name="Submit" />
+        </div>
+      </div>
+    </div>
+</form>
+    <footer class="Hell">
+      <div class="container footer-container">
+        <p>&copy; 2024  |  Codes&Bytes.com  |  All rights Reserved</p>
+      </div>
+    </footer>
+    
+</body>
+
+<!--Sweetalert Library Using for Real Time Notifications While Filling the Form-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<!--JS to Prompt if user tries to upload images without typing in the title of project-->
+<script>
+function checkProjectTitle(projectId) {
+        const projectInput = document.getElementById(projectId);
+        if (projectInput.value.trim() === '') {
+            Swal.fire({
+                icon: 'warning',
+                text: 'Please Fill in the Corresponding Project Title to Upload Image.',
+                confirmButtonText: 'OK'
+            });
+        }
+    }
+</script>
+
+<!--JS to Disable and Enable Upload Button of Project Images accordingly-->
+<script>
+// Function to toggle file upload button based on project input
+function toggleUploadButton(projectInputId, fileUploadId) {
+  const projectInput = document.getElementById(projectInputId);
+  const fileUpload = document.getElementById(fileUploadId);
+
+  if (projectInput.value.trim() !== "") {
+    fileUpload.disabled = false;
+  } else {
+    fileUpload.disabled = true;
+  }
+}
+
+// Function to preview selected file and display its name
+function previewFile(inputId, imgId, nameId) {
+  const fileInput = document.getElementById(inputId);
+  const imgPreview = document.getElementById(imgId);
+  const namePreview = document.getElementById(nameId);
+
+  const file = fileInput.files[0];
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+    imgPreview.src = e.target.result;
+    imgPreview.style.display = 'block';
+  };
+
+  if (file) {
+    reader.readAsDataURL(file);
+    namePreview.textContent = `File selected: ${file.name}`;
+  } else {
+    imgPreview.style.display = 'none';
+    namePreview.textContent = '';
+  }
+}
+
+// Attach event listeners to project input fields to toggle file upload buttons
+document.getElementById('project1').addEventListener('input', function() {
+  toggleUploadButton('project1', 'file-upload1');
+});
+document.getElementById('project2').addEventListener('input', function() {
+  toggleUploadButton('project2', 'file-upload2');
+});
+document.getElementById('project3').addEventListener('input', function() {
+  toggleUploadButton('project3', 'file-upload3');
+});
+
+</script>
+
+
+<!--JS Code to Hide the Additional Details that are not Mandatory-->
+<script>
+  const toggleButton = document.getElementById('toggleTeam');
+    const teamMembersSection = document.getElementById('teamMembers');
+    
+    toggleButton.addEventListener('click', () => {
+      if (teamMembersSection.style.display === 'none') {
+        teamMembersSection.style.display = 'block';
+        toggleButton.textContent = 'Hide Additional Info';
+      } else {
+        teamMembersSection.style.display = 'none';
+        toggleButton.textContent = 'Additional Info';
+      }
+    });
+</script>
+
+
+<!--Details Confirmation Dialogue Box After Submitting the Deatils for Dual Verification-->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("myForm");
+  const submitButton = document.getElementById("submitButton");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    Swal.fire({
+      title: "Please Confirm your Details",
+      html: `
+        <div>
+          <p><strong style="color:blue;font-weight:bold;">Personal Details</strong></p>
+          <hr>
+          <p><strong>Name:</strong> ${document.getElementById("Name").value}</p>
+          <p><strong>Father's Name:</strong> ${document.getElementById("Father_Name").value}</p>
+          <p><strong>Date of Birth:</strong> ${document.getElementById("DOB").value}</p>
+          <p><strong>Email:</strong> ${document.getElementById("Email").value}</p>
+          <p><strong>Gender:</strong> ${document.querySelector('input[name="Gender"]:checked').value}</p>
+          <p><strong>Mobile Number:</strong> ${document.getElementById("Phone").value}</p>
+          <p><strong>Address (City & State):</strong> ${document.getElementById("Address").value}</p>
+          <p><strong>Domain:</strong> ${document.getElementById("Occupation").value}</p>
+          <p><strong>Profession:</strong> ${document.getElementById("Profession").value}</p>
+          <p><strong>Languages:</strong> ${document.getElementById("Languages").value}</p>
+          <p><strong>Hobbies:</strong> ${document.getElementById("Hobbies").value}</p>
+          <hr>
+          <p><strong>10th Education | Equivalent:</strong> ${document.getElementById("Institute_Name1").value}</p>
+          <p><strong>12th Education | Equivalent:</strong> ${document.getElementById("Institute_Name2").value}</p>
+          <p><strong>UG Education | Equivalent:</strong> ${document.getElementById("Institute_Name3").value}</p>
+          <p><strong>Work Experience-1:</strong> ${document.getElementById("Institute_Name4").value}</p>
+          <p><strong>Work Experience-2:</strong> ${document.getElementById("Institute_Name5").value}</p>
+          <p><strong>Work Experience-3:</strong> ${document.getElementById("Institute_Name6").value}</p>
+          <p><strong>Twitter:</strong> ${document.getElementById("Twitter").value}</p>
+          <p><strong>Instagram:</strong> ${document.getElementById("Instagram").value}</p>
+          <p><strong>GitHub:</strong> ${document.getElementById("GitHub").value}</p>
+          <p><strong>Facebook:</strong> ${document.getElementById("Facebook").value}</p>
+          <p><strong>LinkedIn:</strong> ${document.getElementById("LinkedIn").value}</p>
+          <p><strong>Projects:</strong> ${document.getElementById("project1").value},${document.getElementById("project2").value},
+${document.getElementById("project3").value}</p>
+          <p><strong>Skills:</strong> ${document.getElementById("skill1").value},${document.getElementById("skill2").value},
+${document.getElementById("skill3").value},
+${document.getElementById("skill4").value},
+${document.getElementById("skill5").value}</p>
+        </div>
+      `,
+      showCancelButton: true,
+      confirmButtonText: "Confirm",
+      cancelButtonText: "Cancel"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        console.log("Confirm button clicked")
+        document.getElementById("submitButton").style.display = "none";
+        form.submit();
+      }
+    });
+  });
+});
+
+</script>
+
+
+<!--Image Preview Synchronisation while Uploading for Viewing Purposes and Cross Verification Purposes for Users-->
+<script>
+  function previewFile(inputId, imagePreviewId, fileNameId) {
+      const preview = document.getElementById(imagePreviewId);
+      const fileInput = document.getElementById(inputId);
+      const file = fileInput.files[0];
+      const fileNameDisplay = document.getElementById(fileNameId);
+  
+      const reader = new FileReader();
+  
+      reader.onloadend = function () {
+          preview.src = reader.result;
+          preview.style.display = 'block';
+      }
+  
+      if (file) {
+          reader.readAsDataURL(file);
+      } else {
+          preview.src = '';
+          preview.style.display = 'none';
+      }
+  }
+</script>
+
+<!--Validation of Numbers and Year From and Year To Filtering Code in JS-->
+<script>
+    function validateNumber(input) {
+  input.value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+}
+    function clearPlaceholder(element) {
+      element.placeholder = "";
+    }
+    function handleFormSubmission(event) {
+    // Hide the submit button
+    document.getElementById("submit").style.display = "none";
+    // Show loading animation
+    Swal.fire({
+      title: "Please wait...",
+      allowOutsideClick: false,
+      onBeforeOpen: () => {
+        Swal.showLoading();
+      },
+    });
+  }
+//For Validation of Years
+function validateYears(fromId, toId) {
+  var yearFrom = document.getElementById(fromId).value;
+  var yearTo = document.getElementById(toId).value;
+
+  if (yearFrom && yearTo && parseInt(yearTo) < parseInt(yearFrom)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'End Year Should be Greater than or Equal to Start Year.',
+    });
+    document.getElementById(toId).value = ""; // Clear the invalid value
+  }
+}
+
+document.getElementById("Year_To1").addEventListener("blur", function() {
+  validateYears("Year_From1", "Year_To1");
+});
+document.getElementById("Year_To2").addEventListener("blur", function() {
+  validateYears("Year_From2", "Year_To2");
+});
+document.getElementById("Year_To3").addEventListener("blur", function() {
+  validateYears("Year_From3", "Year_To3");
+});
+document.getElementById("Year_To4").addEventListener("blur", function() {
+  validateYears("Year_From4", "Year_To4");
+});
+document.getElementById("Year_To5").addEventListener("blur", function() {
+  validateYears("Year_From5", "Year_To5");
+});
+document.getElementById("Year_To6").addEventListener("blur", function() {
+  validateYears("Year_From6", "Year_To6");
+});
+</script>
+<script>
+  function selectImage(imgElement) {
+    const radioButton = imgElement.previousElementSibling;
+    radioButton.checked = true;
+
+    // Remove border from all images
+    document.querySelectorAll('.Templatessimg').forEach(img => img.style.borderColor = 'transparent');
+
+    // Add border to selected image
+    imgElement.style.borderColor = 'red';
+    imgElement.style.borderStyle = 'dashed';
+    imgElement.style.borderWidth = '5px'; 
+
+  }
+</script>
+<script>
+  function openNewTab(url) {
+    window.open(url, '_blank');
+  }
+</script>
+
+</html>

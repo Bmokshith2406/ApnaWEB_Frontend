@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ApnaWEB's Form | Codes & Bytes</title>
+    <link rel="shortcut icon" type="x-icon" href="http://localhost:3000/Logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/Form.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10"/>
+  </head>
+  <body class="Bodies">
+    <div class="formssh">
+      <div class="title-div">
+        <img src="http://localhost:3000/Logo.jpg" class="Logo" alt="Logo" />
+        <h1>Codes & Bytes</h1>
+        <p class="hekko">
+          Please Complete All the Details Carefully to Create Your Own
+          Personalized Portfolio Website and Resume.
+        </p>
+      </div>
+      <hr class="Line" />
+      <form id="myForm" action="/submit-form" method="post" >
+      
+      <div class="name-div">
+        <div class="name">Enter your Name <span class="required">*</span></div>
+        <div class="input-div">
+          <input
+            type="input"
+            name="Name"
+            id="Name"
+            placeholder="Your Answer"
+            onfocus="clearPlaceholder(this)"
+            required
+          />
+        </div>
+        <div class="dob-div">
+          <div class="name">Date of Birth <span class="required">*</span></div>
+          <div class="input-div">
+            <input type="date" id="DOB" name="DOB" required />
+          </div>
+        </div>
+        <div class="gmail-div">
+          <div class="name">
+            Enter your Email <span class="required">*</span>
+          </div>
+          <div class="input-div">
+            <input
+              type="email"
+              name="Email"
+              id="Email"
+              placeholder="Your Email"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div>
+        </div>
+        <div class="gender-div">
+          <div class="namemr">Gender <span class="required">*</span></div>
+          <div class="input-div">
+            <label>
+              <input type="radio" id="Gender" name="Gender" value="MALE" /> Male
+            </label>
+            <label>
+              <input type="radio" id="Gender" name="Gender" value="FEMALE" /> Female
+            </label>
+            <label>
+              <input type="radio" id="Gender" name="Gender" value="OTHER" /> Other
+            </label>
+          </div>
+        </div>
+        <div class="mobile-div">
+          <div class="name">
+            Enter your Mobile Number <span class="required">*</span>
+          </div>
+          <div class="input-div">
+            <input
+              type="tel"
+              name="Phone"
+              id="Phone"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Mobile Number"
+            />
+          </div>
+        </div>
+        <div class="facebook-div">
+          <div class="name">Enter your Address | City and State <span class="required">*</span></div>
+          <div class="input-div">
+            <input
+              type="input"
+              name="Address"
+              id="Address"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Your answer"
+              required
+            />
+          </div>
+        </div>
+        <div class="facebook-div">
+          <div class="name">Enter your Occupation <span class="required">*</span></div>
+          <div class="input-div">
+            <input
+              type="input"
+              name="Occupation"
+              id="Occupation"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Your answer"
+              required
+            />
+          </div>
+        </div>
+        <div class="facebook-div">
+          <div class="name">Enter your Profession <span class="required">*</span></div>
+          <div class="input-div">
+            <input
+              type="input"
+              name="Profession"
+              id="Profession"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Your answer"
+              required
+            />
+          </div>
+        </div>
+               
+        <div class="twitter-div">
+          <div class="name">Enter your Twitter</div>
+          <div class="input-div">
+            <input
+              type="input"
+              name="Twitter"
+              id="Twitter"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Your answer"
+            />
+          </div>
+        </div>
+        <div class="instagram-div">
+          <div class="name">Enter your Instagram</div>
+          <div class="input-div">
+            <input
+              type="input"
+              name="Instagram"
+              id="Instagram"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Your answer"
+            />
+          </div>
+        </div>
+        <div class="github-div">
+          <div class="name">Enter your GitHub</div>
+          <div class="input-div">
+            <input
+              type="input"
+              name="GitHub"
+              id="GitHub"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Your answer"
+            />
+          </div>
+        </div>
+        <div class="facebook-div">
+          <div class="name">Enter your Facebook</div>
+          <div class="input-div">
+            <input
+              type="input"
+              name="Facebook"
+              id="Facebook"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Your answer"
+            />
+          </div>
+        </div>
+        <div class="linkedin-div">
+          <div class="name">Enter your LinkedIn</div>
+          <div class="input-div">
+            <input
+              type="input"
+              name="LinkedIn"
+              id="LinkedIn"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Your answer"
+            />
+          </div>
+        </div>
+        
+        <div class="facebook-div">
+          <div class="name">Enter all The Languages you Know <span class="required">*</span></div>
+          <div class="input-div">
+            <input
+              type="input"
+              name="Languages"
+              id="Languages"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Your answer"
+              required
+            />
+          </div>
+        </div>
+        <div class="facebook-div">
+          <div class="name">Enter all The Hobbies you have <span class="required">*</span></div>
+          <div class="input-div">
+            <input
+              type="input"
+              name="Hobbies"
+              id="Hobbies"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Your answer"
+              required
+            />
+          </div>
+        </div>
+        <hr class="Line" />
+        <div class="education-div">
+          <div class="namesz">Enter your Education Details of 10th or Equivalent <span class="required">*</span></div>
+          <div class="input-div">
+            <label for="year-from">From Year <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Year_From1"
+              id="Year_From1"
+              oninput="validateNumber(this)"  
+              placeholder="From Year"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-to">To Year <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Year_To1"
+              oninput="validateNumber(this)"
+              id="Year_To1"
+              placeholder="To Year"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Institute Name <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Institute_Name1"
+              id="Institute_Name1"
+              placeholder="Institute Name"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-address">Institute Address <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Institute_Address1"
+              id="Institute_Address1"
+              placeholder="Institute Address"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="cgpa">CGPA Exercised <span class="required">*</span></label>
+            <input
+              type="text"
+              name="CGPA1"
+              id="CGPA1"
+              placeholder="CGPA"
+              onfocus="clearPlaceholder(this)"
+              required
+            />
+          </div>
+        </div>
+        <hr class="Line"/>
+        <div class="education-div">
+          <div class="namesz">Enter your Education Details of 12th or Equivalent <span class="required">*</span></div>
+          <div class="input-div">
+            <label for="year-from">From Year <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Year_From2"
+              id="Year_From2"
+              onfocus="clearPlaceholder(this)"
+              placeholder="From Year"
+              oninput="validateNumber(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-to">To Year <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Year_To2"
+              onfocus="clearPlaceholder(this)"
+              id="Year_To2"
+              oninput="validateNumber(this)"
+              placeholder="To Year"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Course Pursued<span class="required">*</span></label>
+            <input
+              type="text"
+              name="Course1"
+              onfocus="clearPlaceholder(this)"
+              id="Course1"
+              
+              placeholder="Course Pursued"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Institute Name <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Institute_Name2"
+              onfocus="clearPlaceholder(this)"
+              id="Institute_Name2"
+              placeholder="Institute Name"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-address">Institute Address <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Institute_Address2"
+              onfocus="clearPlaceholder(this)"
+              id="Institute_Address2"
+              placeholder="Institute Address"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="cgpa">CGPA Exercised <span class="required">*</span></label>
+            <input
+              type="text"
+              name="CGPA2"
+              onfocus="clearPlaceholder(this)"
+              id="CGPA2"
+              placeholder="CGPA"
+              required
+            />
+          </div>
+        </div>
+        <hr class="Line"/>
+        <div class="education-div">
+          <div class="namesz">Enter your Education Details of UG or Equivalent <span class="required">*</span></div>
+          <div class="input-div">
+            <label for="year-from">From Year <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Year_From3"
+              id="Year_From3"
+              onfocus="clearPlaceholder(this)"
+              placeholder="From Year"
+              oninput="validateNumber(this)"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-to">To Year <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Year_To3"
+              onfocus="clearPlaceholder(this)"
+              id="Year_To3"
+              oninput="validateNumber(this)"
+              placeholder="To Year"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Course Pursued<span class="required">*</span></label>
+            <input
+              type="text"
+              name="Course2"
+              onfocus="clearPlaceholder(this)"
+              id="Course2"
+              placeholder="Course Pursued"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Institute Name <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Institute_Name3"
+              onfocus="clearPlaceholder(this)"
+              id="Institute_Name3"
+              placeholder="Institute Name"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-address">Institute Address <span class="required">*</span></label>
+            <input
+              type="text"
+              name="Institute_Address3"
+              onfocus="clearPlaceholder(this)"
+              id="Institute_Address3"
+              placeholder="Institute Address"
+              required
+            />
+          </div>
+          <div class="input-div">
+            <label for="cgpa">CGPA Exercised <span class="required">*</span></label>
+            <input
+              type="text"
+              name="CGPA3"
+              onfocus="clearPlaceholder(this)"
+              id="CGPA3"
+              placeholder="CGPA"
+              required
+            />
+          </div>
+        </div>
+        <hr class="Line"/>
+        <div class="education-div">
+          <div class="namesz">Enter your Work Experience Details, Most & Best Recent First </div>
+          <div class="input-div">
+            <label for="year-from">From Year </label>
+            <input
+              type="text"
+              name="Year_From4"
+              id="Year_From4"
+              oninput="validateNumber(this)"
+              onfocus="clearPlaceholder(this)"
+              placeholder="From Year"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-to">To Year </label>
+            <input
+              type="text"
+              name="Year_To4"
+              oninput="validateNumber(this)"
+              onfocus="clearPlaceholder(this)"
+              id="Year_To4"
+              placeholder="To Year"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Corporation's Name </label>
+            <input
+              type="text"
+              name="Institute_Name4"
+              onfocus="clearPlaceholder(this)"
+              id="Institute_Name4"
+              placeholder="Corporation's Name"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-address">Significant Contribution </label>
+            <input
+              type="text"
+              name="Signi1"
+              onfocus="clearPlaceholder(this)"
+              id="Signi1"
+              placeholder="Significant Contribution"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="cgpa">Designation </label>
+            <input
+              type="text"
+              name="CGPA4"
+              onfocus="clearPlaceholder(this)"
+              id="CGPA4"
+              placeholder="Designation"
+              
+            />
+          </div>          
+        </div>
+        <hr class="Line"/>
+
+        <div class="education-div">
+          <div class="namesz">Work Experience Details-2</div>
+          <div class="input-div">
+            <label for="year-from">From Year </label>
+            <input
+              type="text"
+              name="Year_From5"
+              id="Year_From5"
+              oninput="validateNumber(this)"
+              onfocus="clearPlaceholder(this)"
+              placeholder="From Year"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-to">To Year </label>
+            <input
+              type="text"
+              name="Year_To5"
+              oninput="validateNumber(this)"
+              onfocus="clearPlaceholder(this)"
+              id="Year_To5"
+              placeholder="To Year"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Corporation's Name </label>
+            <input
+              type="text"
+              name="Institute_Name5"
+              onfocus="clearPlaceholder(this)"
+              id="Institute_Name5"
+              placeholder="Corporation's Name"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-address">Significant Contribution </label>
+            <input
+              type="text"
+              name="Signi2"
+              onfocus="clearPlaceholder(this)"
+              id="Signi2"
+              placeholder="Significant Contribution"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="cgpa">Designation </label>
+            <input
+              type="text"
+              name="CGPA5"
+              onfocus="clearPlaceholder(this)"
+              id="CGPA5"
+              placeholder="Designation"
+              
+            />
+          </div>          
+        </div>
+        <hr class="Line"/>
+
+        <div class="education-div">
+          <div class="namesz">Work Experience Details-3</div>
+          <div class="input-div">
+            <label for="year-from">From Year </label>
+            <input
+              type="text"
+              name="Year_From6"
+              id="Year_From6"
+              oninput="validateNumber(this)"
+              onfocus="clearPlaceholder(this)"
+              placeholder="From Year"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-to">To Year </label>
+            <input
+              type="text"
+              name="Year_To6"
+              oninput="validateNumber(this)"
+              onfocus="clearPlaceholder(this)"
+              id="Year_To6"
+              placeholder="To Year"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Corporation's Name </label>
+            <input
+              type="text"
+              name="Institute_Name6"
+              onfocus="clearPlaceholder(this)"
+              id="Institute_Name6"
+              placeholder="Corporation's Name"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-address">Significant Contribution </label>
+            <input
+              type="text"
+              name="Signi3"
+              onfocus="clearPlaceholder(this)"
+              id="Signi3"
+              placeholder="Significant Contribution"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="cgpa">Designation </label>
+            <input
+              type="text"
+              name="CGPA6"
+              onfocus="clearPlaceholder(this)"
+              id="CGPA6"
+              placeholder="Designation"
+              
+            />
+          </div>
+          
+        </div>
+        <hr class="Line"/>
+        <div class="education-div">
+          <div class="namesz">Please Enter the Titles of  the Projects You Have Accomplished.</div>
+          <div class="input-div">
+            <label for="year-from">Project-1 </label>
+            <input
+              type="text"
+              name="project1"
+              id="project1"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Project-1"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-to">Project-2 </label>
+            <input
+              type="text"
+              name="project2"
+              onfocus="clearPlaceholder(this)"
+              id="project2"
+              placeholder="Project-2"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Project-3 </label>
+            <input
+              type="text"
+              name="project3"
+              onfocus="clearPlaceholder(this)"
+              id="project3"
+              placeholder="Project-3"
+              
+            />
+          </div>
+        </div>
+        <hr class="Line"/>
+        <div class="education-div">
+          <div class="namesz">Please Enter Your Skills, Most Efficient First</div>
+          <div class="input-div">
+            <label for="year-from">Skill-1 </label>
+            <input
+              type="text"
+              name="skill1"
+              id="skill1"
+              onfocus="clearPlaceholder(this)"
+              placeholder="Skill-1"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="year-to">Skill-2 </label>
+            <input
+              type="text"
+              name="skill2"
+              onfocus="clearPlaceholder(this)"
+              id="skill2"
+              placeholder="Skill-2"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-name">Skill-3 </label>
+            <input
+              type="text"
+              name="skill3"
+              onfocus="clearPlaceholder(this)"
+              id="skill3"
+              placeholder="Skill-3"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="institute-address">Skill-4 </label>
+            <input
+              type="text"
+              name="skill4"
+              onfocus="clearPlaceholder(this)"
+              id="skill4"
+              placeholder="Skill-4"
+              
+            />
+          </div>
+          <div class="input-div">
+            <label for="cgpa">Skill-5 </label>
+            <input
+              type="text"
+              name="skill5"
+              onfocus="clearPlaceholder(this)"
+              id="skill5"
+              placeholder="Skill-5"
+              
+            />
+          </div>          
+        </div>
+        <hr class="Line"/>
+        
+        
+        <!-- Submit button -->
+        <div>
+          <input class="btn" type="submit" id="submit" name="Submit" />
+        </div>
+      </div>
+    </div>
+</form>
+    <footer class="Hell">
+      <div class="container footer-container">
+        <p>&copy; 2023  |  Codes&Bytes.com  |  All rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById("myForm");
+      const submitButton = document.getElementById("submit");
+  
+      form.addEventListener("submit", function() {
+        // Disable the submit button
+        submitButton.disabled = true;
+        // Change the text of the submit button
+        submitButton.innerText = "Submitting...";
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+  </script>
+  <script>
+    function validateNumber(input) {
+  input.value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+}
+    function clearPlaceholder(element) {
+      element.placeholder = "";
+    }
+    function handleFormSubmission(event) {
+    // Hide the submit button
+    document.getElementById("submit").style.display = "none";
+    // Show loading animation
+    Swal.fire({
+      title: "Please wait...",
+      allowOutsideClick: false,
+      onBeforeOpen: () => {
+        Swal.showLoading();
+      },
+    });
+  }
+    //For Validation of Years
+function validateYears(fromId, toId) {
+  var yearFrom = document.getElementById(fromId).value;
+  var yearTo = document.getElementById(toId).value;
+
+  if (yearFrom && yearTo && parseInt(yearTo) < parseInt(yearFrom)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'End Year Should be Greater than or Equal to Start Year.',
+    });
+    document.getElementById(toId).value = ""; // Clear the invalid value
+  }
+}
+
+document.getElementById("Year_To1").addEventListener("blur", function() {
+  validateYears("Year_From1", "Year_To1");
+});
+document.getElementById("Year_To2").addEventListener("blur", function() {
+  validateYears("Year_From2", "Year_To2");
+});
+document.getElementById("Year_To3").addEventListener("blur", function() {
+  validateYears("Year_From3", "Year_To3");
+});
+document.getElementById("Year_To4").addEventListener("blur", function() {
+  validateYears("Year_From4", "Year_To4");
+});
+document.getElementById("Year_To5").addEventListener("blur", function() {
+  validateYears("Year_From5", "Year_To5");
+});
+document.getElementById("Year_To6").addEventListener("blur", function() {
+  validateYears("Year_From6", "Year_To6");
+});
+
+
+
+  </script>
+</html>

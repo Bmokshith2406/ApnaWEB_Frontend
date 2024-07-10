@@ -1,0 +1,62 @@
+* {
+    color: black;
+    padding: 10px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 18px;
+    padding: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;    
+}
+.watermark::after {
+    content: "";
+    background-image: url('/Logo.jpg');
+    opacity: 0.2;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 50%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    width: 60%; 
+    height: 60%;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 32px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
+    margin-top: -25px;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+body {
+    box-shadow: 0 14px 16px 12px rgb(0 0 0 / 0.1),
+                0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #f8f8f8; 
+        box-shadow: 0 8px 10px 8px rgb(0 0 0 / 0.1),
+                    0 1px 2px -1px rgb(0 0 0 / 0.1);
+    }
+}
+@media screen and (max-width: 768px) {
+    .watermark::after {
+        width: 60%; 
+        top: 65%;
+    left: 50%;
+    }
+}
